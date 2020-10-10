@@ -200,8 +200,9 @@ nav {
 .search-suggestions {
     background: var(--color-dark);
     display: none;
+    height: 500px;
     width: 110%;
-    margin-top: 1rem;
+    margin-top: 3rem;
     overflow-y: scroll;
 }
 
@@ -306,15 +307,18 @@ nav {
     flex-basis: content;
 }
 
-.content-result {
-    width: auto;
-}
-
-.content-result .waveform {
+.content-waveform {
     max-width: 50%;
     height: 100%;
 }
 
+.content-tags {
+    text-align: left;
+    width: 20%;
+    font-size: 1.3rem;
+}
+
+/* PLAYER */
 .content-player {
     position: relative;
     height: 70px;

@@ -41,16 +41,16 @@
         showResults(fakeResponseObj);
 
         // THIS WOULD BE THE WAY OF DEALING WITH REAL API
-        // $.ajax({
-        //     url: 'https://api.createmusic.com/search',
-        //     data: {
-        // search: encodeURI(e.target.value),
-        //         multiLayerOnly,
-        //     },
-        //     success(response) {
-        //         // use Response
-        //     },
-        // });
+        $.ajax({
+            url: 'http://api.createmusic.com/search',
+            data: {
+                search: encodeURI(e.target.value),
+                multiLayerOnly,
+            },
+            success(response) {
+                console.log(response);
+            },
+        });
     });
 
     // Filter Listeners
@@ -117,10 +117,10 @@
                         <h3>${track.albumName}</h3>
                         <p>${track.cueName}</p>
                     </div>
-                    <img class="waveform" src=${
+                    <img class="content-waveform" src=${
                         track.waveformPreview
                     } alt="waveform" />
-                    <p >${track.cueStyles.join(', ')}</p>
+                    <p class="content-tags">${track.cueStyles.join(', ')}</p>
                 </div>
             `);
 
