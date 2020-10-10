@@ -1,6 +1,7 @@
 (function () {
     // MUSIC SEARCH
     const searchInput = $('#search-input');
+    const searchForm = $('#search-form');
     const multilayerCheckbox = $('#multilayer');
     const numResults = $('#num-results');
     let multiLayerOnly = 0;
@@ -17,13 +18,17 @@
     // CONTENT ELEMS
     const contentFilters = $('#content-filters');
     const contentResults = $('#content-results');
-    const contentPlayer = $('#content-player');
 
     // *** SEARCH LISTENERS *** //
 
     // Update mulitlayer flag on click of checkbox
     multilayerCheckbox.on('click', e => {
         multiLayerOnly = e.target.checked ? 1 : 0;
+    });
+
+    searchForm.on('submit', e => {
+        e.preventDefault();
+        // API request here.
     });
 
     // Ajax search on input
